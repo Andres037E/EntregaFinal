@@ -1,7 +1,7 @@
 function autoInicioRelacionCliente() {
 
     $.ajax({
-        url: "http://localhost:8080/api/Client/all",
+        url: "http://144.22.56.221:8080/api/Client/all",
         type: "GET",
         datatype: "JSON",
         success: function (respuesta) {
@@ -18,7 +18,7 @@ function autoInicioRelacionCliente() {
 function autoInicioCostume() {
 
     $.ajax({
-        url: "http://localhost:8080/api/Costume/all",
+        url: "http://144.22.56.221:8080/api/Costume/all",
         type: "GET",
         datatype: "JSON",
         success: function (respuesta) {
@@ -53,7 +53,7 @@ function agregarReservation() {
         $.ajax({
             type: "POST",
             contentType: "application/json",
-            url: "http://localhost:8080/api/Reservation/save",
+            url: "http://144.22.56.221:8080/api/Reservation/save",
             data: dataToSend,
             datatype: "json",
 
@@ -81,7 +81,7 @@ function agregarReservation() {
 function listarReservation() {
     $.ajax({
 
-        url: "http://localhost:8080/api/Reservation/all",
+        url: "http://144.22.56.221:8080/api/Reservation/all",
         type: "GET",
         datatype: "JSON",
         success: function (response) {
@@ -132,7 +132,7 @@ function borrarReservation(idElemento) {
             dataType: 'json',
             data: dataToSend,
 
-            url: "http://localhost:8080/api/Reservation/" + idElemento,
+            url: "http://144.22.56.221:8080/api/Reservation/" + idElemento,
             type: 'DELETE',
             contentType: "application/JSON",
             success: function (response) {
@@ -152,7 +152,7 @@ function borrarReservation(idElemento) {
 function cargarDatosReservation(id) {
     $.ajax({
         dataType: 'json',
-        url: "http://localhost:8080/api/Reservation/" + id,
+        url: "http://144.22.56.221:8080/api/Reservation/" + id,
         type: 'GET',
 
         success: function (response) {
@@ -192,7 +192,7 @@ function actualizarReservation(idElemento) {
             datatype: 'json',
             data: dataToSend,
             contentType: "application/JSON",
-            url: "http://localhost:8080/api/Reservation/update",
+            url: "http://144.22.56.221:8080/api/Reservation/update",
             type: "PUT",
 
             success: function (response) {

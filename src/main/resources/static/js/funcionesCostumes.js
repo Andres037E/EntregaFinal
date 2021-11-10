@@ -60,7 +60,7 @@ function pintarRespuestaCostume(response) {
 function cargarDatosCostume(id) {
     $.ajax({
         dataType: 'json',
-        url: "http://localhost:8080/api/Costume/" + id,
+        url: "http://144.22.56.221:8080/api/Costume/" + id,
         type: 'GET',
 
         success: function (response) {
@@ -101,7 +101,7 @@ function agregarCostume() {
         $.ajax({
             type: "POST",
             contentType: "application/json",
-            url: "http://localhost:8080/api/Costume/save",
+            url: "http://144.22.56.221:8080/api/Costume/save",
             data: dataToSend,
             datatype: 'json',
 
@@ -138,7 +138,7 @@ function borrar(idElemento) {
         {
             dataType: 'json',
             data: dataToSend,
-            url: "http://localhost:8080/api/Costume/" + idElemento,
+            url: "http://144.22.56.221:8080/api/Costume/" + idElemento,
             type: 'DELETE',
             contentType: "application/JSON",
             success: function (response) {
@@ -176,7 +176,7 @@ function actualizar(idElemento) {
             datatype: 'json',
             data: dataToSend,
             contentType: "application/JSON",
-            url: "http://localhost:8080/api/Costume/update",
+            url: "http://144.22.56.221:8080/api/Costume/update",
             type: "PUT",
 
             success: function (response) {
